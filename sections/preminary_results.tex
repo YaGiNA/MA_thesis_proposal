@@ -1,1 +1,35 @@
 \section{Preliminary Results and Discussion}
+\subsection{Dataset}
+In order to input our proposed model, we obtained FakeNewsNet\cite{shu2017exploiting,shu2017fake,shu2018fakenewsnet} dataset.
+This includes tweets which has URL of news.
+Every news and tweets are labeled true/fake by fact-check result on PolitiFact or GossipCop.
+We use tweet text as comments and the other information(user, retweet, like, etc.) are not used.
+\reftab{table:fakenewsnet} is statistics of dataset.
+
+\begin{table}[htp]
+    \centering
+    \caption{Statistics of FakeNewsNet by fact-checking platforms}
+    \label{table:fakenewsnet}
+    \begin{tabular}{lcccc}
+        \hline 
+        & \multicolumn{2}{c}{True} & \multicolumn{2}{c}{Fake} \\
+        Platform & News & Comments & News & Comments \\
+        \hline \hline 
+        PolitiFact & 1 & 1 & 1 & 1 \\
+        GossipCop & 1 & 1 & 1 & 1 \\
+        \hline 
+        Overall & 1 & 1 & 1 & 1 \\
+        \hline 
+    \end{tabular}
+\end{table}
+
+\subsection{Plan of experiments}
+We will make answer of following evaluation questions:
+\begin{description}
+    \item[EQ1] Can our proposed model detect fake news more accurate than any other state-of-the-art fake news detection algorithms?
+    \item[EQ2] Is generating comments important in fake news detection by Seq-GAN?
+    \item[EQ3] Are generated comments similar to real comments?
+\end{description}
+
+We are planning to answer them by corresponding with any other state-of-the-art fake news detection algorithms,
+ablation experiments, and subjective evaluation by human beings.

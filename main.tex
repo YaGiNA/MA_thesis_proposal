@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt,oneside,uplatex]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\addbibresource{./reference.bib}
+\usepackage[papersize={210truemm, 297truemm}]{geometry}
+\geometry{top=40truemm,bottom=35truemm,left=25truemm,right=25truemm}
+%
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{nidanfloat}
+\usepackage{afterpage}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{here}
+\usepackage{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+%\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{ascmac}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{bxwareki}
+\usepackage{okumacro}
+
+%
+\setcounter{tocdepth}{3}
+%
+%余白設定
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{35\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.55in}
+\setlength{\abovedisplayskip}{2.5pt} % 上部のマージン
+\setlength{\belowdisplayskip}{2pt} % 下部のマージン
+%
+\newcommand{\etal}{\textit{et al}.,}
+\newcommand{\ie}{\textit{i}.\textit{e}.,}
+\newcommand{\eg}{\textit{e}.\textit{g}.,}
+\newcommand{\reffig}[1]{Fig.\ref{#1}}
+\newcommand{\reftab}[1]{Table.\ref{#1}}
+\newcommand{\refequ}[1]{Formula.\ref{#1}}
+\newcommand{\refsec}[1]{Section.\ref{#1}}
+\providecommand{\keywords}[1]{\textbf{\textit{Index terms---}} #1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Masters Thesis Proposal\\The New Fake News Classification with Comment Generation by Seq-GAN}
+\author{Yuta Yanagi, Yasuyuki Tahara, Akihito Ohsuga, Yuichi Sei}
+\date{\today}
+\begin{document}
+\include{front}
+%
+\maketitle
+%
+%\frontmatter
+%表紙
+%\begin{titlepage}
+%  \vspace*{7mm}
+%  \begin{center}
+%    \Large{Masters Thesis Proposal}\\
+%
+%    \vspace{40truemm}
+%
+%    \LARGE{\textbf{The New Fake News Classification with Comment Generation by Seq-GAN}}\\
+%
+%    \vspace{30truemm}
+%
+%    \Large{Yuta Yanagi}\\
+%    \Large{Department of Informatics, The University of Electro-Communications}\\
+%
+%    \vspace{15truemm}
+%
+%    \begin{table*}[h]
+%        \centering
+%        \hspace*{4em}
+%        \begin{tabular}{rcl}
+%            \large{Main Advisor}&\large{:}&\large{Yasuyuki Tahara} \vspace{5truemm} \\
+%            \large{Advisor}&\large{:}&\large{Akihito Ohsuga} \vspace{5truemm} \\
+%            \large{Advisor}&\large{:}&\large{Yuichi Sei} \vspace{5truemm} \\
+%        \end{tabular}
+%    \end{table*}
+%  \end{center}
+%\end{titlepage}
+%
+%アブスト
+
+\input{./sections/abstract}
+%
+%本文
+\input{sections/introduction}
+\input{sections/related_researches}
+\input{sections/thesis}
+\input{sections/methodology}
+\input{sections/preminary_results}
+\input{sections/implications_of_research}
+
+%謝辞
+%\input{./sections/thanks}
+
+%参考文献
+\newpage
+\addcontentsline{toc}{section}{reference}
+\printbibliography
+
+%付録
+%\input{./sections/appendix}
+%
+%
+\end{document}

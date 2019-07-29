@@ -1,0 +1,48 @@
+\section{Preliminary Results and Discussion}
+\subsection{Dataset}
+In order to input our proposed model, we obtained FakeNewsNet\cite{shu2017exploiting,Shu:2017:FND:3137597.3137600,shu2018fakenewsnet} dataset.
+This includes tweets which has URL of news.
+Every news and tweets are labeled true/fake by fact-check result on PolitiFact or GossipCop.
+We use tweet text as comments and the other information(user, retweet, like, etc.) are not used.
+\reftab{table:fakenewsnet} is statistics of dataset.
+
+\begin{table}[htp]
+    \centering
+    \caption{Statistics of FakeNewsNet by fact-checking platforms}
+    \label{table:fakenewsnet}
+    \begin{tabular}{lcccc}
+        \hline 
+        & \multicolumn{2}{c}{True} & \multicolumn{2}{c}{Fake} \\
+        Platform & News & Comments & News & Comments \\
+        \hline \hline 
+        PolitiFact & 624 & 370669 & 432 & 195901 \\
+        GossipCop & 16817 & 843933 & 5323 & 539491 \\
+        \hline 
+        Overall & 17441 & 1214602 & 5755 & 735392 \\
+        \hline 
+    \end{tabular}
+\end{table}
+
+\subsection{Plan of experiments}
+We will make answer of following evaluation questions:
+\begin{description}
+    \item[EQ1] Can our proposed model detect fake news more accurate than any other state-of-the-art fake news detection algorithms?
+    \item[EQ2] Is generating comments important in fake news detection by Seq-GAN?
+    \item[EQ3] Are generated comments similar to real comments?
+\end{description}
+
+We are planning to answer them by comparing our model with any other state-of-the-art fake news detection algorithms,
+ablation experiments, and subjective evaluation by human beings.
+
+\subsection{Plan of discussion}
+\subsubsection{EQ1: comparing}
+We will get results of not only our proposed model but also other algorithms which are proposed by related works.
+All of them use both of news text and comments for equal comparing.
+\subsubsection{EQ2: ablation experiments}
+We also compare by ablation experiments.
+It does our proposed model with ones which don't use generated comments in order to
+testify to importance of generating comments by Seq-GAN.
+If proposed model is better than ablated one, generating comments is important part to find fake news.
+\subsubsection{EQ3: subjective evaluation}
+When training is over, generated comments will be so similar to real comments.
+We can measure how far from real comments to generated comments are by subjective evaluation.

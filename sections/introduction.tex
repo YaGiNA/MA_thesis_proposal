@@ -1,0 +1,31 @@
+\section{Introduction}
+In this era, social media is one of important parts of our lives.
+Social media makes more easy to get news and share with friends online.
+However, at the same moment, 
+there are also information includes less credibility.
+Some of them have obvious misinformation that are made by malicious purpose,
+we call them ``fake news''.
+
+Fake news try to make wrong rumors on social media by spreading on social media.
+Last year, a picture was spread on Russian social media which shows someone with an Estonian flag on their sleeve beating the protester.
+After this, Estonian volunteers identified this picture as a fake news\cite{vaikmaa_2019}.
+In addition, In the U.S., fake news created some mayhem not only online, but also offline(real incidents)
+e.g. in Washington, fake news about the Pizzagate conspiracy is reported to have motivated the shooting\cite{agencies_2016}.
+Spreading fake news also shakes premise of democracy due to people cannot get accurate information.
+Therefore, there are some researches which try to spot fake news by machine learning.
+
+The challenging point of this is there are news article which try to deceive readers
+and this makes harder to classify by simple rule-based method.
+To get more information to detection,
+there are some works which aggregate social context i.e. Retweet, Like, and comments
+report better results than only considering news text\cite{Guo:2018:RDH:3269206.3271709}.
+However, social contexts are not able to get before spreading.
+Hence, there is also a work which generate words of comments from news by CVAE to detect fake news when they are just posted\cite{ijcai2018-533}.
+Their work tries to generate comments, but generated ones are only have words which have high probability of appearing.
+
+In this work, We will propose a model which evaluate news credibility by news text and generated comments by Seq-GAN\cite{AAAI1714344}.
+This model train not only news features but also generating comments.
+In training sequence includes real posted comments but test sequence doesn't use them in order to simulate operation in real-social media.
+The skill of generating comments help classification in test sequence.
+
+We plan to measure performance of our proposed method by some experiments with real-posted dataset and some state-of-the-art fake news detection algorithms.
